@@ -12,3 +12,12 @@
 
 
 ---
+
+## 2. TestMerger
+
+--- 
+
+#### Application for merging multiple test and retake test results from different sources into a single processed and evaluated format.
+#### Object-oriented structure, design patterns, random generation and hashing.
+
+---
