@@ -3,10 +3,10 @@ import FileReading.Parsers.GloveParser;
 import FileReading.Parsers.MaskParser;
 import FileReading.Parsers.NotebookParser;
 import FileReading.Parsers.PencilParser;
-import Modell.Equipments.Glove;
-import Modell.Equipments.Mask;
-import Modell.Products.Notebook;
-import Modell.Products.Pencil;
+import Model.Equipments.Glove;
+import Model.Equipments.Mask;
+import Model.Products.Notebook;
+import Model.Products.Pencil;
 import StorageUnits.*;
 
 import java.io.IOException;

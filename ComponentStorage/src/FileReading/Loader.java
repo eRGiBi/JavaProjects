@@ -2,7 +2,7 @@ package FileReading;
 
 import FileReading.Parsers.IParser;
 
-import Modell.Item;
+import Model.Item;
 
 import java.io.*;
 import java.util.ArrayList;

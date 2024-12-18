@@ -1,6 +1,6 @@
 package FileReading.Parsers;
 
-import Modell.Equipments.Mask;
+import Model.Equipments.Mask;
 import StorageUnits.CustomerStorage;
 
 import java.util.Objects;

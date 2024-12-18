@@ -1,6 +1,6 @@
 package FileReading.Parsers;
 
-import Modell.*;
+import Model.*;
 
 
 public interface IParser {

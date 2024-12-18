@@ -1,6 +1,6 @@
 package StorageUnits;
 
-import Modell.Products.Notebook;
+import Model.Products.Notebook;
 
 import java.util.ArrayList;
 

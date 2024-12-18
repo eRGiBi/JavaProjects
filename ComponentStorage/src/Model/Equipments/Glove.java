@@ -1,6 +1,4 @@
-package Modell.Equipments;
-
-import Modell.Equipments.Equipment;
+package Model.Equipments;
 
 public class Glove extends Equipment {
 

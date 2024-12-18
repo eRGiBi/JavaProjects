@@ -1,6 +1,6 @@
 package StorageUnits;
 
-import Modell.Equipments.Glove;
+import Model.Equipments.Glove;
 
 import java.util.ArrayList;
 

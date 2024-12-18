@@ -1,6 +1,6 @@
 package FileReading.Parsers;
 
-import Modell.Equipments.Glove;
+import Model.Equipments.Glove;
 import StorageUnits.CustomerStorage;
 
 import java.util.Objects;

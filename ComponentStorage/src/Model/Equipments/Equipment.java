@@ -1,6 +1,6 @@
-package Modell.Equipments;
+package Model.Equipments;
 
-import Modell.Item;
+import Model.Item;
 
 abstract public  class Equipment extends Item {
 

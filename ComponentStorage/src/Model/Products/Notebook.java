@@ -1,6 +1,4 @@
-package Modell.Products;
-
-import Modell.Products.Product;
+package Model.Products;
 
 public class Notebook extends Product {
 

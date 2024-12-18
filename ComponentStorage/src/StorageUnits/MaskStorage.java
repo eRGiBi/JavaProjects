@@ -1,6 +1,6 @@
 package StorageUnits;
 
-import Modell.Equipments.Mask;
+import Model.Equipments.Mask;
 import java.util.ArrayList;
 
 public class MaskStorage extends EquipmentStorage {

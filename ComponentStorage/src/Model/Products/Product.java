@@ -1,6 +1,6 @@
-package Modell.Products;
+package Model.Products;
 
-import Modell.Item;
+import Model.Item;
 
 abstract public class Product extends Item {
 

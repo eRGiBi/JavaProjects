@@ -1,6 +1,6 @@
 package FileReading.Parsers;
 
-import Modell.Products.Notebook;
+import Model.Products.Notebook;
 import StorageUnits.CustomerStorage;
 
 import java.util.Objects;
