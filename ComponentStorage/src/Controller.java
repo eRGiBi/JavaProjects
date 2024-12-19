@@ -16,9 +16,10 @@ public class Controller {
     public Controller() {
         Customers = new CustomerStorage();
     }
+
     //CustomerStorage used with dependency injection
     private CustomerStorage Customers;
-    private static final String FileName = "src/Data/Data.csv";
+    private static final String FileName = "ComponentStorage/src/Data/Data.csv";
 
     public void Start() throws IOException {
 
