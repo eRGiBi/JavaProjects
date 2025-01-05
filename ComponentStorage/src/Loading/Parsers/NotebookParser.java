@@ -1,4 +1,4 @@
-package FileReading.Parsers;
+package Loading.Parsers;
 
 import Model.Products.Notebook;
 import StorageUnits.CustomerStorage;

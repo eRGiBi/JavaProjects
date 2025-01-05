@@ -1,8 +1,8 @@
-import FileReading.Loader;
-import FileReading.Parsers.GloveParser;
-import FileReading.Parsers.MaskParser;
-import FileReading.Parsers.NotebookParser;
-import FileReading.Parsers.PencilParser;
+import Loading.Loader;
+import Loading.Parsers.GloveParser;
+import Loading.Parsers.MaskParser;
+import Loading.Parsers.NotebookParser;
+import Loading.Parsers.PencilParser;
 import Model.Equipments.Glove;
 import Model.Equipments.Mask;
 import Model.Products.Notebook;
@@ -36,10 +36,8 @@ public class Controller {
         PencilStorage pencilStorage = new PencilStorage();
         pencilStorage.addAll(new Loader<Pencil>().load(FileName, new PencilParser(Customers)));
 
-
         System.out.println("Listing unordered storages:");
         System.out.println();
-
         gloveStorage.Print();
         System.out.println();
         notebookStorage.Print();
@@ -48,6 +46,7 @@ public class Controller {
         System.out.println();
         pencilStorage.Print();
         System.out.println();
+
         System.out.println("//////////////////////////////////////////");
         System.out.println();
 
@@ -65,6 +64,7 @@ public class Controller {
         pencilStorage.SortByQuantity();
         pencilStorage.Print();
         System.out.println();
+
         System.out.println("//////////////////////////////////////////");
         System.out.println();
 
@@ -76,7 +76,7 @@ public class Controller {
         notebookStorage.SortByPrice();
         notebookStorage.Print();
         System.out.println();
-        System.out.println();
+
         System.out.println("//////////////////////////////////////////");
         System.out.println();
 
@@ -88,16 +88,10 @@ public class Controller {
         maskStorage.SortBySecurityLevel();
         maskStorage.Print();
         System.out.println();
-        System.out.println();
         System.out.println("//////////////////////////////////////////");
         System.out.println();
 
-        System.out.println("Listing unordered costumers:");
-        System.out.println();
-        Customers.Print();
-        System.out.println();
         System.out.println("Listing ordered costumers by name:");
-
         System.out.println();
         Customers.SortByName();
         Customers.Print();

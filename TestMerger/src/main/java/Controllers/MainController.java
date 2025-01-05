@@ -80,5 +80,6 @@ public class MainController {
 
         new WriteController().writeFile(scholars);
 
+        DatabaseController.manageDatabase(scholars);
     }
 }

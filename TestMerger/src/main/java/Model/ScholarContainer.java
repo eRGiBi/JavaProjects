@@ -40,4 +40,7 @@ public class ScholarContainer {
         return sb.toString();
     }
 
+    public Scholar[] getScholars() {
+        return scholars.toArray(new Scholar[0]);
+    }
 }

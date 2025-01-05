@@ -33,6 +33,33 @@ public class Scholar {
         this.practice3Result = this.rgen.getDouble();
     }
 
+    public double getTheory1Result() {
+        return theory1Result;
+    }
+
+    public double getTheory2Result() {
+        return theory2Result;
+    }
+
+    public double getTheory3Result() {
+        return theory3Result;
+    }
+
+    public double getPractice1Result() {
+        return practice1Result;
+    }
+
+    public double getPractice2Result() {
+        return practice2Result;
+    }
+
+    public double getPractice3Result() {
+        return practice3Result;
+    }
+
+    public String getFinalGrade() {
+        return finalGrade;
+    }
 
     public void setExamResult(double result, String examType, int examNumber, boolean isRetake) {
         if (examNumber != 1 && examNumber != 2) {

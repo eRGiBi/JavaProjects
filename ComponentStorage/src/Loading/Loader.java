@@ -1,6 +1,6 @@
-package FileReading;
+package Loading;
 
-import FileReading.Parsers.IParser;
+import Loading.Parsers.IParser;
 
 import Model.Item;
 
