@@ -24,4 +24,8 @@ public class RandomDataGenerator {
     public double getDouble(){
         return Double.parseDouble(this.df.format(rgen.nextDouble()).replace(",", "."));
     }
+
+    public float getFloat(){
+        return Float.parseFloat(this.df.format(rgen.nextFloat()).replace(",", "."));
+    }
 }

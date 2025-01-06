@@ -8,13 +8,13 @@ public class Scholar {
     private final RandomDataGenerator rgen;
 
     private final String id;
-    private double theory1Result;
-    private double theory2Result;
-    private double theory3Result;
+    private float theory1Result;
+    private float theory2Result;
+    private float theory3Result;
 
-    private double practice1Result;
-    private double practice2Result;
-    private double practice3Result;
+    private float practice1Result;
+    private float practice2Result;
+    private float practice3Result;
 
     private String finalGrade;
 
@@ -29,31 +29,33 @@ public class Scholar {
 
         this.rgen = rgen;
 
-        this.theory3Result = this.rgen.getDouble();
-        this.practice3Result = this.rgen.getDouble();
+        this.theory3Result = this.rgen.getFloat();
+        this.practice3Result = this.rgen.getFloat();
     }
 
-    public double getTheory1Result() {
+    public String getId() {return id; }
+
+    public float getTheory1Result() {
         return theory1Result;
     }
 
-    public double getTheory2Result() {
+    public float getTheory2Result() {
         return theory2Result;
     }
 
-    public double getTheory3Result() {
+    public float getTheory3Result() {
         return theory3Result;
     }
 
-    public double getPractice1Result() {
+    public float getPractice1Result() {
         return practice1Result;
     }
 
-    public double getPractice2Result() {
+    public float getPractice2Result() {
         return practice2Result;
     }
 
-    public double getPractice3Result() {
+    public float getPractice3Result() {
         return practice3Result;
     }
 
@@ -61,7 +63,7 @@ public class Scholar {
         return finalGrade;
     }
 
-    public void setExamResult(double result, String examType, int examNumber, boolean isRetake) {
+    public void setExamResult(float result, String examType, int examNumber, boolean isRetake) {
         if (examNumber != 1 && examNumber != 2) {
             throw new IllegalArgumentException("Invalid exam number");
         }
@@ -73,7 +75,7 @@ public class Scholar {
         }
     }
 
-    private void updateResult(double result, int examNumber, boolean isRetake, boolean isTheory) {
+    private void updateResult(float result, int examNumber, boolean isRetake, boolean isTheory) {
         if (isTheory) {
             if (examNumber == 1) {
                 this.theory1Result = calculateResult(this.theory1Result, result, isRetake);
@@ -89,22 +91,18 @@ public class Scholar {
         }
     }
 
-    private double calculateResult(double currentResult, double newResult, boolean isRetake) {
+    private float calculateResult(float currentResult, float newResult, boolean isRetake) {
         return isRetake ? (currentResult + newResult) / 2 : newResult;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public void setFinalGrade() {
 
-        double finalPracticeResult = (
+        float finalPracticeResult = (
                 (this.theory1Result) * 100 +
                         (this.theory2Result) * 100 +
                         3 * (this.theory3Result * 100)) / 5;
 
-        double finalTheoryResult = (
+        float finalTheoryResult = (
                 (this.practice1Result) * 100 +
                         (this.practice2Result) * 100 +
                         3 * (this.practice3Result * 100)) / 5;
@@ -112,22 +110,22 @@ public class Scholar {
         this.finalGrade = determineGrade(finalPracticeResult, finalTheoryResult);
     }
 
-    private static String determineGrade(double practicePercentage, double theoryPercentage) {
+    private static String determineGrade(float practicePercentage, float theoryPercentage) {
 
         double average = (practicePercentage + theoryPercentage)/2;
 
         if (practicePercentage < 50 || theoryPercentage < 50){
-            return "Did not pass";
-        }else if (average < 66){
+            return "Failed";
+        } else if (average < 66){
             return "Sufficient";
         } else if (average < 81) {
-            return "Medium";
-        }else if (average < 91) {
+            return "Satisfactory";
+        } else if (average < 91) {
             return "Good";
         } else if (average < 101){
             return "Excellent";
-        }else {
-            return "Invalid";
+        } else {
+            throw new IllegalArgumentException("Invalid grade");
         }
     }
 

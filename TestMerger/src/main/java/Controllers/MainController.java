@@ -2,6 +2,7 @@ package Controllers;
 
 import Loading.*;
 
+import Model.Scholar;
 import Model.ScholarContainer;
 import Model.ScholarFactory;
 import org.w3c.dom.ls.LSOutput;
@@ -9,6 +10,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.MatchResult;
@@ -53,7 +55,8 @@ public class MainController {
         );
     }
 
-    public void start() throws IOException, NoSuchAlgorithmException, IllegalArgumentException, IllegalStateException {
+    public void start() throws IOException, NoSuchAlgorithmException, IllegalArgumentException, IllegalStateException,
+            SQLException {
 
         new HashingController().hash(
                 "TestMerger/data/original_data/",
@@ -80,6 +83,6 @@ public class MainController {
 
         new WriteController().writeFile(scholars);
 
-        DatabaseController.manageDatabase(scholars);
+        new DatabaseController().manageDatabase(scholars);
     }
 }

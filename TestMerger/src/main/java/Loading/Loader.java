@@ -12,9 +12,9 @@ public class Loader {
     public Loader () {
          }
 
-    public HashMap<String, Double> readFile(String filename) throws FileNotFoundException {
+    public HashMap<String, Float> readFile(String filename) throws FileNotFoundException {
 
-        HashMap<String, Double> examData = new HashMap<>();
+        HashMap<String, Float> examData = new HashMap<>();
 
         BufferedReader br = new BufferedReader(new FileReader(filename));
 
@@ -29,7 +29,7 @@ public class Loader {
                 splitLine = line.split(";");
                 splitLine[1] = splitLine[1].replace(",", ".");
 
-                double result = Double.parseDouble(splitLine[1]);
+                float result = Float.parseFloat(splitLine[1]);
 
                 examData.put(splitLine[0], result);
 

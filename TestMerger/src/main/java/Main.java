@@ -3,6 +3,7 @@ import Controllers.MainController;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +12,10 @@ public class Main {
 
         try {
             new MainController(seed).start();
+
+        } catch (SQLException e) {
+            System.err.println("Error: An SQL error occurred.");
+            e.printStackTrace();
 
         } catch (FileNotFoundException e) {
             System.err.println("Error: The file could not be found. Please check the file path.");

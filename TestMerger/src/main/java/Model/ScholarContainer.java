@@ -2,8 +2,9 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
-public class ScholarContainer {
+public class ScholarContainer implements Iterable<Scholar> {
 
     private ArrayList<Scholar> scholars;
     private ScholarFactory factory;
@@ -13,7 +14,8 @@ public class ScholarContainer {
         this.factory = factory;
     }
 
-    public void extractExam(HashMap<String, Double> map, int examNumber, String type, boolean retake) {
+
+    public void extractExam(HashMap<String, Float> map, int examNumber, String type, boolean retake) {
 
         map.forEach((k, v) -> {
 
@@ -40,7 +42,8 @@ public class ScholarContainer {
         return sb.toString();
     }
 
-    public Scholar[] getScholars() {
-        return scholars.toArray(new Scholar[0]);
+    @Override
+    public Iterator<Scholar> iterator() {
+        return new ScholarContainerIterator(scholars);
     }
 }
